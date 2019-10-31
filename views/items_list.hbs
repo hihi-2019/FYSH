@@ -12,12 +12,15 @@
         </thead>
 
         <tbody>
+          {{#each data}}
           <tr>
             <td>{{user_id}}</td>
             <td>{{name}}</td>
             <td>{{price}}</td>
-            <td></td>
+            <td><a href="/listings/{{id}}"><button>ITEM</button></a></td>
+            <td><a href="/profile/{{user_id}}"><button>SELLER</button></a></td>
           </tr>
+          {{/each}}
         </tbody>
       </table>
 

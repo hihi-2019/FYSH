@@ -13,16 +13,24 @@ router.get('/', (req, res) => {
 })
 
 router.get('/listings', (req, res) => {
-  res.render('items_list', {})  
+  db.showItems()
+    .then(data => {
+      res.render('items_list', {data})  
+    })
 })
 
 router.get('/listings/:id', (req, res) => {
   id = req.params.id
-  res.send('id of listings')  
+  db.findItem(id)
+  .then(data => {
+    console.log('\nData sent to individual item route')
+    console.log(data)
+      res.render('item', {data})  
+    })
 })
 
 router.get('/profile/:id', (req, res) => {
-  res
+  res.send('we need profile view')
 })
 
 
