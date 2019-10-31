@@ -5,8 +5,8 @@ Flip Your Sh1t Here
 !C R !U D
 
 1. Display a list of items for sale and 2 buttons
-  1.1. 1st button brings up more information around the specific item
-  1.2. 2nd button brings up the user profile who listed this item, includes all other listings from this user
+  -1.1. 1st button brings up more information around the specific item
+  -1.2. 2nd button brings up the user profile who listed this item, includes all other listings from this user
 
 **#2nd MVP**
 CR !U D
