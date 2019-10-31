@@ -1,1 +1,21 @@
 <h1>create item form here</h1>
+<form action="/additem" method="post">
+    Item Name:<br>
+    <input type='text' name='itemname'><br>
+    Description:<br>
+    <input type='text' name='description'><br>
+    $<br>
+    <input type='text' name='price'><br>
+    Category:<br>
+    <!-- Dropdown Trigger -->
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+        {{#each data}}
+            <li value="{{category}}">{{category}}</li>
+        {{/each}}
+  </ul>
+    <input type="submit" value="Submit">
+</form>
+

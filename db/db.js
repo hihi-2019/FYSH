@@ -5,7 +5,8 @@ const database = knex(config[env])
 
 function showItems(db = database){
   return db('items')
-    .select()
+    .select('category')
+    .distinct()
     .then(items => {
       return items
     })
