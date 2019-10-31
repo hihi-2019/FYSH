@@ -9,16 +9,20 @@ const database = require('knex')(config)
 
 
 router.get('/', (req, res) => {
-  res.send('homepage')  
+  res.render('home', {})  
 })
 
 router.get('/listings', (req, res) => {
-  res.send('listings page')  
+  res.render('items_list', {})  
 })
 
 router.get('/listings/:id', (req, res) => {
   id = req.params.id
   res.send('id of listings')  
+})
+
+router.get('/profile/:id', (req, res) => {
+  res
 })
 
 
