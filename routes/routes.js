@@ -33,5 +33,13 @@ router.get('/profile/:id', (req, res) => {
   res.send('we need profile view')
 })
 
+router.get('/signup', (req, res) => {
+  res.render('signup', {})
+})
+
+router.get('/newitem', (req, res) => {
+  res.render('newitem', {})
+})
+
 
 module.exports = router
