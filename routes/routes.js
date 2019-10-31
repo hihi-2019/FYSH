@@ -38,7 +38,11 @@ router.get('/signup', (req, res) => {
 })
 
 router.get('/newitem', (req, res) => {
-  res.render('newitem', {})
+  db.showItems()
+    .then(data => {
+      console.log(data)
+      res.render('newitem', {data})
+    })
 })
 
 
