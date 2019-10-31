@@ -56,11 +56,19 @@ router.post('/add', (req, res) => {
 })
 
 router.get('/newitem', (req, res) => {
-  db.showItems()
+  db.showCategories()
     .then(data => {
-      console.log(data)
-      res.render('newitem', {data})
+      db.showUserIds()
+      .then(user => {
+        res.render('newitem', {data, user})
+      })
     })
+})
+
+router.post('/additem', (req, res) =>{
+  console.log(req.body)
+  db.addItem(req.body)
+
 })
 
 
