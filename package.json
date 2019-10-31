@@ -1,0 +1,38 @@
+{
+  "name": "knex-joins-stories",
+  "version": "0.1.0",
+  "description": "Practise joins",
+  "main": "index.js",
+  "scripts": {
+    "knex": "knex",
+    "dev": "nodemon index",
+    "test": "jest --watch --noStackTrace",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-academy-challenges/knex-joins-stories.git"
+  },
+  "keywords": [
+    "knex",
+    "joins"
+  ],
+  "author": "Enspiral Dev Academy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-academy-challenges/knex-joins-stories/issues"
+  },
+  "homepage": "https://github.com/dev-academy-challenges/knex-joins-stories#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "knex": "^0.17.5",
+    "sqlite3": "^4.0.8"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  }
+}
