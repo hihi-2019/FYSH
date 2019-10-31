@@ -1,0 +1,37 @@
+
+<div class="container center">
+<h1>User Profile</h1>
+</div>
+
+<div class="container">
+<div class="divider"></div>
+<div class="section">
+  {{#each profile}}
+  <h2>
+    Profile Name:
+  </h2>
+  <h4>
+    {{name}}
+  </h4>
+</div>
+<div class="divider"></div>
+<div class="section">
+  <h2>
+    Contact Email Address:
+  </h2>
+  <h4>
+    {{email}}
+  </h4>
+</div>
+<div class="divider"></div>
+<div class="section">
+  <h2>
+    Profile's User ID:
+  </h2>
+  <h4>
+    {{username}}
+  </h4>
+{{/each}}
+</div>
+</div>
+

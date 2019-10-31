@@ -35,6 +35,7 @@ router.get('/profile/:id', (req, res) => {
   id = req.params.id
   db.findUser(id)
   .then(profile => {
+    console.log(profile)
     res.render('profile', {profile})
   })
 })
