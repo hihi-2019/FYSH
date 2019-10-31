@@ -22,8 +22,37 @@ function findItem(item_id, db = database){
     })
 }
 
+function newUser (userData, db = database){
+  return db('users').insert(userData)
+  .select()
+  .then(userData => {
+    return userData
+  })
+}
+
+
+
+function findUser (userId, db = database){
+  return db('users')
+  .select()
+  .where('id', userId)
+  .then(user => {
+    console.log(user)
+    return user
+  })
+}
+
+
+
+
+
+
+
+
 
 module.exports = {
   showItems,
   findItem,
+  newUser,
+  findUser,
 }

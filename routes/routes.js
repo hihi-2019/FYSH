@@ -29,17 +29,36 @@ router.get('/listings/:id', (req, res) => {
     })
 })
 
+
+
 router.get('/profile/:id', (req, res) => {
-  res.send('we need profile view')
+  id = req.params.id
+  db.findUser(id)
+  .then(profile => {
+    res.render('profile', {profile})
+  })
 })
+
+
+
+
 
 router.get('/signup', (req, res) => {
   res.render('signup', {})
 })
 
+router.post('/add', (req, res) => {
+  // res.render('signup', {})
+  console.log(req.body)
+  db.newUser(req.body)
+
+  res.redirect('/')
+})
+
 router.get('/newitem', (req, res) => {
   res.render('newitem', {})
 })
+
 
 
 module.exports = router
