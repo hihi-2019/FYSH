@@ -11,6 +11,15 @@ function showItems(db = database){
     })
 }
 
+function showItem(id, db = database){
+  return db('items')
+    .select()
+    .where('id', id)
+    .then(items => {
+      return items
+    })
+}
+
 function showCategories(db = database){
   return db('items')
     .select('category')
@@ -42,7 +51,7 @@ function newUser (userData, db = database){
 
 function addItem (itemData, db = database){
   return db('items')
-    .insert({'name': itemData.itemname, 'category': "category", 'price': itemData.price, "user_id": 1, 'picture': itemData.picture})
+    .insert(itemData)
     .then(data => {
       console.log(data)
     })
@@ -53,7 +62,6 @@ function findUser (userId, db = database){
   .select()
   .where('id', userId)
   .then(user => {
-    console.log(user)
     return user
   })
 }
@@ -62,11 +70,24 @@ function showUserIds (db = database){
   return db('users')
   .select('id', 'username')
   .then(username => {
-    console.log(username)
     return username
   })
 }
 
+
+function updateListing(updateItemData, id, db = database){
+  return db('items')
+    .where('id', id)
+    .update({'name': updateItemData.name,
+            'description': updateItemData.description,
+            'category': updateItemData.category,
+            'price': updateItemData.price,
+            'picture': updateItemData.picture
+    })
+    .then(x => {
+      console.log(x)
+    })
+}
 
 
 
@@ -76,10 +97,12 @@ function showUserIds (db = database){
 
 module.exports = {
   showItems,
+  showItem,
   findItem,
   newUser,
   findUser,
   showCategories,
   addItem,
   showUserIds,
+  updateListing,
 }

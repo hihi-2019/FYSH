@@ -1,0 +1,31 @@
+<h1>{{data.name}} Edit time</h1>
+
+<form action="/listings/{{item_id}}" method="POST">
+  <label for="name">NAME:
+    <input type="text" name="name">
+  </label>
+
+  <label for="description">DESCRIPTION:
+    <input type="text" name="description">
+  </label>
+
+  <label for="picture">PICTURE:
+    <input type="text" name="picture">
+  </label>
+
+  <label for="price">PRICE:
+    <input type="text" name="price">
+  </label>
+
+  <label for="category">
+    <div class="input-field col s12">
+      <select name='category'>
+        {{#each data}}
+          <option value="{{category}}">{{category}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </label>
+
+  <input type="submit" value="Submit">
+</form>

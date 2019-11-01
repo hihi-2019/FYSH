@@ -2,7 +2,7 @@
 
 <p>Other users are selling things. Have a look by clicking the item.</p>
 
- <a href="/newitem" class="waves-effect waves-light btn-large"><i class="material-icons">attach_money</i>SELL ITEM</a> 
+ <a href="/newitem" class="waves-effect waves-light btn-large"><i class="material-icons">attach_money</i>SELL ITEM<i class="material-icons">attach_money</i></a> 
 
 <ul class="collection col s12 m4">
   {{#each data}}
@@ -17,15 +17,21 @@
         </p>
       </div>
 
-      <div class="row s8">
+      <div class="col s1">
+        <p>$ {{price}}</p>
+      </div>
+
+      <div class="col s4">
+        <p>{{description}}</p>
+      </div>
+
+      <div class="col s3">
             <a href="/listings/{{id}}" class="waves-effect waves-light btn-large">ITEM</a>
             
             <a href="/profile/{{user_id}}" class="waves-effect waves-light btn-large">SELLER</a> 
            
       </div>
     </div>
-
-    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
 
     {{/each}}
   </li>

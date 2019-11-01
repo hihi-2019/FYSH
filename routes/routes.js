@@ -29,6 +29,21 @@ router.get('/listings/:id', (req, res) => {
     })
 })
 
+router.get('/listings/:id/edit', (req, res) => {
+  db.showItem(req.params.id)
+    .then(data => {
+      res.render('editItem', {data})
+    })
+})
+
+router.post('/listings/:id', (req, res) => {
+  console.log(req.body)
+  db.updateListing(req.body, req.params.id)
+    .then(
+      res.redirect('/listings/' + req.params.id)
+    )
+})
+
 
 
 router.get('/profile/:id', (req, res) => {
