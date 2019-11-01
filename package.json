@@ -1,28 +1,28 @@
 {
-  "name": "knex-joins-stories",
+  "name": "fysh",
   "version": "0.1.0",
-  "description": "Practise joins",
+  "description": "New Trade Me",
   "main": "index.js",
   "scripts": {
     "knex": "knex",
     "dev": "nodemon index",
     "test": "jest --watch --noStackTrace",
-    "start": "node index"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dev-academy-challenges/knex-joins-stories.git"
+    "url": "git+https://github.com/hihi-2019/FYSH.git"
   },
   "keywords": [
     "knex",
     "joins"
   ],
-  "author": "Enspiral Dev Academy",
-  "license": "ISC",
+  "author": "Edgars Fraser Joseph Tosca",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dev-academy-challenges/knex-joins-stories/issues"
+    "url": "https://github.com/hihi-2019/FYSH.git"
   },
-  "homepage": "https://github.com/dev-academy-challenges/knex-joins-stories#readme",
+  "homepage": "https://github.com/hihi-2019/FYSH.git#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
