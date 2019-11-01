@@ -1,4 +1,6 @@
-<h1>create item form here</h1>
+<div class="container">
+
+<h1>Create a new item form here</h1>
 <form action="/additem" method="post">
     Item Name:<br>
     <input type='text' name='name'><br>
@@ -23,5 +25,13 @@
             </select>
         </div>
         <input type="text" name="picture" value="hammer.jpg">
-    <input type="submit" value="Submit">
+        <div class="divider"></div>
+        <br>
+        <button class="btn waves-effect waves-light" type="submit" value="submit" name="submit">Submit
+    <i class="material-icons right">send</i>
+  </button>
+    {{!-- <input type="submit" value="Submit"> --}}
 </form>
+
+
+</div>

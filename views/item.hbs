@@ -1,2 +1,59 @@
-<h1>ITEM</h1>
+<div class="container">
 
+<h1>Item</h1>
+
+<p>Have a look at the item details below!</p>
+{{#each data}}
+ <a href="/listings/{{item_id}}/edit" class="waves-effect waves-light btn-large">EDIT ITEM</a> 
+{{/each}}
+<div class="collection col s12 m4">
+  {{#each data}}
+      <div class="valign-wrapper item-wrap">
+      <div class="left-align">
+          <ul>
+          <li><h5>
+                Item: 
+           </h5>{{name}}</li>
+
+          <li><h5>Category: </h5>{{category}}</li>
+          <li><h5>Username: </h5>{{username}}</li>
+          <li><h5>Email: </h5>{{email}}</li>
+          </ul>
+      </div>
+      <div class="right">
+          <h2>
+          ${{price}}
+          </h2>
+      </div>
+    </div>  
+      <div class="divider"></div>
+ 
+  <div class="collection-item center">
+        <h1 class="title">{{name}}</h1>
+    <img class="img" src="/images/{{picture}}" alt="{{picture}}">
+  </div>
+    
+    
+    <div class="row">
+      <div class="col s8">
+        <h5>Awesome {{name}} for {{name}}ing things</h5>
+         <p>
+          *no blood*
+        </p>
+      </div>
+    </div>
+
+
+      {{!-- <div class="row s8">
+            <a href="/listings/{{id}}" class="waves-effect waves-light btn-large">ITEM</a>
+            
+            <a href="/profile/{{user_id}}" class="waves-effect waves-light btn-large">SELLER</a> 
+           
+      </div> --}}
+
+    {{!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> --}}
+
+    {{/each}}
+</div>
+</div>
+</div>

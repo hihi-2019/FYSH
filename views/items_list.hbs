@@ -1,8 +1,16 @@
+<div class="container">
+
 <h1>Items For Sale</h1>
 
 <p>Other users are selling things. Have a look by clicking the item.</p>
+<p>Or click the Sell Item button to sell your own shit.</p>
 
- <a href="/newitem" class="waves-effect waves-light btn-large"><i class="material-icons">attach_money</i>SELL ITEM<i class="material-icons">attach_money</i></a> 
+<div class="row">
+ <a href="/newitem" class="waves-effect waves-light btn-large"><i class="material-icons">attach_money</i>SELL ITEM</a> 
+</div>
+
+ <br>
+
 
 <ul class="collection col s12 m4">
   {{#each data}}
@@ -36,3 +44,5 @@
     {{/each}}
   </li>
 </ul>
+
+</div>
