@@ -3,9 +3,9 @@
 <h1>Item</h1>
 
 <p>Have a look at the item details below!</p>
-
- <a href="/newitem" class="waves-effect waves-light btn-large"><i class="material-icons">attach_money</i>SELL ITEM</a> 
-
+{{#each data}}
+ <a href="/listings/{{item_id}}/edit" class="waves-effect waves-light btn-large">EDIT ITEM</a> 
+{{/each}}
 <div class="collection col s12 m4">
   {{#each data}}
       <div class="valign-wrapper item-wrap">

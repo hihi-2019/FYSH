@@ -1,6 +1,10 @@
-<h1>{{data.name}} Edit time</h1>
+<div class="container">
 
-<form action="/listings/{{item_id}}" method="POST">
+{{#each data}}
+
+<h1>Edit item: {{name}}</h1>
+
+<form action="/listings/{{id}}" method="POST">
   <label for="name">NAME:
     <input type="text" name="name">
   </label>
@@ -16,7 +20,7 @@
   <label for="price">PRICE:
     <input type="text" name="price">
   </label>
-
+{{/each}}
   <label for="category">
     <div class="input-field col s12">
       <select name='category'>
@@ -27,5 +31,15 @@
     </div>
   </label>
 
-  <input type="submit" value="Submit">
+
+        <div class="divider"></div>
+        <br>
+        <button class="btn waves-effect waves-light" type="submit" value="submit" name="submit">Submit
+    <i class="material-icons right">send</i>
+  </button>
+   
+
+  {{!-- <input type="submit" value="Submit"> --}}
 </form>
+
+</div>
