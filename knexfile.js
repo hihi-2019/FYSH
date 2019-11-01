@@ -34,7 +34,6 @@ module.exports = {
       max: 10
     },
     migrations: {
-      "postinstall": "knex migrate:latest",
       tableName: 'knex_migrations'
     }
   }

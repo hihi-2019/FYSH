@@ -7,7 +7,8 @@
     "knex": "knex",
     "dev": "nodemon index",
     "test": "jest --watch --noStackTrace",
-    "start": "node index.js"
+    "start": "node index.js",
+    "postinstall": "knex migrate:latest"
   },
   "repository": {
     "type": "git",
