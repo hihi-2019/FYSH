@@ -1,7 +1,7 @@
 <h1>create item form here</h1>
 <form action="/additem" method="post">
     Item Name:<br>
-    <input type='text' name='itemname'><br>
+    <input type='text' name='name'><br>
     Description:<br>
     <input type='text' name='description'><br>
     $<br>
@@ -16,7 +16,7 @@
     </div>
     User:<br>
         <div class="input-field col s12">
-            <select name='user'>
+            <select name='user_id'>
                 {{#each user}}
                 <option value="{{id}}">{{username}}</option>
                 {{/each}}
