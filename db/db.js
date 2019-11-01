@@ -5,6 +5,14 @@ const database = knex(config[env])
 
 function showItems(db = database){
   return db('items')
+    .select()
+    .then(items => {
+      return items
+    })
+}
+
+function showCategories(db = database){
+  return db('items')
     .select('category')
     .distinct()
     .then(items => {
@@ -24,14 +32,21 @@ function findItem(item_id, db = database){
 }
 
 function newUser (userData, db = database){
-  return db('users').insert(userData)
-  .select()
-  .then(userData => {
-    return userData
+  return db('users')
+    .insert(userData)
+    .select()
+    .then(userData => {
+      return userData
   })
 }
 
-
+function addItem (itemData, db = database){
+  return db('items')
+    .insert({'name': itemData.itemname, 'category': "category", 'price': itemData.price, "user_id": 1, 'picture': itemData.picture})
+    .then(data => {
+      console.log(data)
+    })
+}
 
 function findUser (userId, db = database){
   return db('users')
@@ -43,6 +58,14 @@ function findUser (userId, db = database){
   })
 }
 
+function showUserIds (db = database){
+  return db('users')
+  .select('id', 'username')
+  .then(username => {
+    console.log(username)
+    return username
+  })
+}
 
 
 
@@ -56,4 +79,7 @@ module.exports = {
   findItem,
   newUser,
   findUser,
+  showCategories,
+  addItem,
+  showUserIds,
 }

@@ -1,55 +1,27 @@
 <h1>Items For Sale</h1>
 
 <p>Other users are selling things. Have a look by clicking the item.</p>
-{{!-- 
-      <table>
-        <thead>
-          <tr>
-              <th>Seller</th>
-              <th>Item Name</th>
-              <th>Item Price</th>
-          </tr>
-        </thead>
 
-        <tbody>
-          {{#each data}}
-          <tr>
-            <td>{{user_id}}</td>
-            
-            <td><img src="/images/hammer.jpg" alt="" class="circle">
-            <span class="title">{{name}}</span>
-            <td>{{price}}</td>
-            <td><a href="/listings/{{id}}"><button>ITEM</button></a></td>
-            <td><a href="/profile/{{user_id}}"><button>SELLER</button></a></td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table> --}}
-
+ <a href="/newitem" class="waves-effect waves-light btn-large"><i class="material-icons">attach_money</i>SELL ITEM</a> 
 
 <ul class="collection col s12 m4">
   {{#each data}}
   <li class="collection-item avatar">
-    <img src="/images/hammer.jpg" alt="" class="col s4 circle">
+    <img src="/images/{{picture}}" alt="" class="col s4 circle">
 
     <div class="row">
       <div class="col s4">
         <h4 class="title">{{name}}</h4>
-        <p>Awesome hammer for hammering things<br>
+        <p>Awesome {{name}} for {{name}}ing things<br>
           *no blood*
         </p>
       </div>
 
       <div class="row s8">
-            <a class="waves-effect waves-light btn-large">ITEM</a>
+            <a href="/listings/{{id}}" class="waves-effect waves-light btn-large">ITEM</a>
             
-            <a class="waves-effect waves-light btn-large">SELLER</a> 
-            <a class="waves-effect waves-light btn-large"><i class="material-icons">attach_money</i>SELL ITEM</a> 
-
-
-        {{!-- <a href="/listings/{{id}}"><button>ITEM</button></a>
-        <a href="/profile/{{user_id}}"><button>SELLER</button></a>
-        <a href="/newitem"><button>ADD ITEM</button></a> --}}
+            <a href="/profile/{{user_id}}" class="waves-effect waves-light btn-large">SELLER</a> 
+           
       </div>
     </div>
 

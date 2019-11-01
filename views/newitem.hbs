@@ -7,15 +7,21 @@
     $<br>
     <input type='text' name='price'><br>
     Category:<br>
-    <!-- Dropdown Trigger -->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-        {{#each data}}
-            <li value="{{category}}">{{category}}</li>
-        {{/each}}
-  </ul>
+    <div class="input-field col s12">
+        <select name='category'>
+            {{#each data}}
+            <option value="{{category}}">{{category}}</option>
+            {{/each}}
+        </select>
+    </div>
+    User:<br>
+        <div class="input-field col s12">
+            <select name='user'>
+                {{#each user}}
+                <option value="{{id}}">{{username}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <input type="text" name="picture" value="hammer.jpg">
     <input type="submit" value="Submit">
 </form>
-
