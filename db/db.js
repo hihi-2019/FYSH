@@ -32,10 +32,10 @@ function showCategories(db = database){
 function findItem(id, db = database){
   return db('users')
     .leftOuterJoin('items', 'users.id', 'items.user_id')
-    .select('users.name AS user_name', '*')
-    .where('id', id)
+    .select('items.id AS item_id', 'users.name AS user_name', '*')
+    .where('item.id', id)
     .then(item => {
-      //delete item[0].id
+      delete item[0].id
       return item
     })
 }
