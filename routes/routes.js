@@ -84,6 +84,9 @@ router.get('/newitem', (req, res) => {
 router.post('/additem', (req, res) =>{
   console.log(req.body)
   db.addItem(req.body)
+    .then(
+      res.redirect('/listings')
+    )
 
 })
 
